@@ -7,6 +7,7 @@ module ActiveRecord::Import
 
   def self.base_adapter(adapter)
     case adapter
+    when 'jdbcsqlite3' then 'sqlite3'
     when 'mysqlspatial' then 'mysql'
     when 'mysql2spatial' then 'mysql2'
     when 'spatialite' then 'sqlite3'
